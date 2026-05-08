@@ -1,28 +1,8 @@
-# Balance-aware Sequence Sampling Makes Multimodal Learning Better
-This repo is the official implementation of _Retrieval-Balance-aware Sequence Sampling Makes Multimodal Learning Better_ accepted by IJCAI 2025. 
+# Rebalancing Multi-Modal Learning via Frequency-Decoupled Discriminative Structure Enhancement
+This repo is the official implementation of _Rebalancing Multi-Modal Learning via Frequency-Decoupled Discriminative Structure Enhancement_. 
 
 ## Framework
 <img width="1232" alt="image" src="Figure/framework.png" />
-
-## Environment Configuration
-First, clone this repo:
-```shell
-git clone https://github.com/njustkmg/IJCAI25-BSS.git
-
-cd IJCAI25-BSS
-```
-First, create a new conda env for BSS:
-```shell
-conda create -n BSS python=3.7
-```
-Next, activate this env and install the dependencies from the requirements.txt:
-```shell
-conda activate BSS
-
-pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
-
-pip install -r requirements.txt
-```
 
 ## Data Preparation
 * Download the CREMA-D dataset from this link: https://github.com/CheyneyComputerScience/CREMA-D
@@ -53,12 +33,9 @@ The directory organization of the final data file should be as follows (task CRE
 ```
 
 ### Training & Evaluation
-Run the following command to train the model and evaluate the results (task Kinetics-Sounds as an example):
+Run the following command to train the model and evaluate the results (take Kinetics-Sounds as an example):
 ```shell
-cd KS
 
-python train-CL.py
+python train_KS.py
 
-python train-SPL.py
 ```
-Note that CL and SPL  denote the proposed method with the heuristic scheduler and learning-based scheduler, respectively.
